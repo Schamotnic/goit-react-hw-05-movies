@@ -12,6 +12,7 @@ export const MovieDetailsPage = () =>{
         try{
             const item = await getMovieById(itemId)
             setItem(item)
+            console.log(item)
         }catch(error){
             toast.error('NOT FOUND, PLEASE ENTRY')
         }
@@ -20,11 +21,11 @@ export const MovieDetailsPage = () =>{
    },[itemId])
 
    return(
-    <>
+    
         <main>
-            {item &&<MovieCard to='movies/:itemId' item={item}/> }
+            {item && <MovieCard to='movies/:itemId' item={item}/> }
             <Outlet/>
         </main>
-    </>
+    
    )
 }

@@ -5,7 +5,7 @@ import{MoviesPage} from './Pages/MoviesPage';
 import{MovieDetailsPage} from './Pages/MovieDetailsPage';
 import{ActorsPage} from './Pages/ActorsPage';
 import {DescriptionPage} from './Pages/DescriptionPage'
-
+import{Navigation} from './components/Navigation/Navigation'
 
 
 
@@ -13,6 +13,7 @@ import {DescriptionPage} from './Pages/DescriptionPage'
 export const App = () => {
     return (
       <>
+      <Navigation/>
       <div>
         <Routes>
           <Route path="/" element={<HomePage />} />
