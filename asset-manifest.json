@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Schamotnic/goit-react-hw-05-movies/static/js/main.770fbb1f.js",
+    "main.js": "/Schamotnic/goit-react-hw-05-movies/static/js/main.9fbb61cf.js",
     "index.html": "/Schamotnic/goit-react-hw-05-movies/index.html",
-    "main.770fbb1f.js.map": "/Schamotnic/goit-react-hw-05-movies/static/js/main.770fbb1f.js.map"
+    "main.9fbb61cf.js.map": "/Schamotnic/goit-react-hw-05-movies/static/js/main.9fbb61cf.js.map"
   },
   "entrypoints": [
-    "static/js/main.770fbb1f.js"
+    "static/js/main.9fbb61cf.js"
   ]
 }
