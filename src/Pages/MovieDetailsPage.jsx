@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
-import { useParams,Outlet } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {getMovieById} from "../services/moviesApi";
 import {MovieCard} from '../components/MovieCard/MovieCard';
 
@@ -10,7 +10,7 @@ export const MovieDetailsPage = () =>{
    useEffect(() =>{
     async function fetchItem(){
         try{
-            const item = await getMovieById(itemId)
+            const item = await getMovieById(itemId);
             setItem(item)
             console.log(item)
         }catch(error){
@@ -23,8 +23,8 @@ export const MovieDetailsPage = () =>{
    return(
     
         <main>
-            {item && <MovieCard to='movies/:itemId' item={item}/> }
-            <Outlet/>
+            {item && <MovieCard item={item}/> }
+            {/* <Outlet/> */}
         </main>
     
    )
