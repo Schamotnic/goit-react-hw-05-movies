@@ -1,28 +1,36 @@
-import {ClasList} from "./CastStyle"
+import {CastList} from "./CastStyle"
+import PropTypes from 'prop-types'
 
-export const Cast=({item}) =>{
-return(
-    <>
-       {item && (<div>
-        {item.length > 0 && (
-            <ClasList>
-                {item.map(({id,profile_path,name,character}) =>{
-                    return(
-                        <li key={id}> <div>
-                            {profile_path && (
-                                <img src ={`https://image.tmdb.org/t/p/w300${profile_path}`} alt={name}/>
-                            )}
-                            <div>
-                                <p>Name: {name}</p>
-                                <p>Character: {character}</p>
-                            </div>
-                        </div>
-                        </li>
-                    )
-                })}
-            </ClasList>
+export const Cast = ({ items }) => {
+    return (
+      <>
+        {items && (
+          <div>
+            {items.length > 0 && (
+              <CastList>
+                {items.map(item => {
+                  return <li key={item.id}>
+                    <div>
+                      {item.profile_path && (
+                        <img src={`https://image.tmdb.org/t/p/w300${item.profile_path}`} alt={item.name} />)
+                      }
+                      <div>
+                        <p>Name: {item.name}</p>
+                        <p>Character: {item.character}</p>
+                      </div>
+                    </div>
+                  </li>;
+                  },
+                )}
+              </CastList>
+            )}
+          </div>
         )}
-       </div>)}
-    </>
-)
-}
+      </>
+    );
+  };
+  
+  
+  Cast.propTypes={
+    items:PropTypes.array.isRequired
+  }

@@ -8,23 +8,25 @@ import {Cast} from '../components/Cast/Cast'
 
 
 export const ActorsPage = () =>{
-   const [item, setitem] = useState(null); 
-   const{itemid}= useParams();
+    const{itemId}= useParams();
+    const [item, setitem] = useState(null); 
 
    useEffect(() => {
     async function fetchItem(){
         try{
-            const item = await getMovieCast(itemid)
+            const item = await getMovieCast(itemId)
             setitem(item)
+            const p = item
+            console.log(p)
         }catch(arror){
             toast.error('information not found')   
         }
     }
     fetchItem()
-   }, [itemid]);
+   }, [itemId]);
    return(
 <>
-    {item && <Cast item = {item}/>}
+    {item && <Cast items={item}/>}
 </>
    )
 }

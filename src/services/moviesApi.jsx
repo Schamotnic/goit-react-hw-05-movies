@@ -27,3 +27,8 @@ export const getFoundMovie = async (query) =>{
     const response = await axios.get(`/search/movie?api_key=${API_KEY}&query=${query}&include_adult=false`)
 return response.data.results
 }
+
+export const getReviews = async (id) => {
+    const response = await axios.get(`/movie/${id}/reviews?api_key=${API_KEY}&language=en-US`)
+    return response.data.results
+  }
