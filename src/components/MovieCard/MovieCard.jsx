@@ -1,8 +1,8 @@
-import {Link, useLocation,Outlet } from "react-router-dom";
+import {Link, useLocation } from "react-router-dom";
 import PropTypes from 'prop-types';
 import {GoBack} from '../BtnGoBack/GoBack';
 import {Contaienr,H2,CardBlock,Feature,LinkCast } from "./MovieCardStyled";
-// import { Contaienr } from "components/MainPage/MainPageStyle";
+
 
 
 
@@ -52,10 +52,8 @@ export const MovieCard = ({item}) => {
         </CardBlock>
         <h2>Additional information</h2>
         <hr/>
-        <Outlet/>
         <LinkCast to='cast' state={location.state}>Cast</LinkCast>
         <Link to='reviews' state={location.state}>Reviews</Link>
-      
       </Contaienr>
     )
   };
