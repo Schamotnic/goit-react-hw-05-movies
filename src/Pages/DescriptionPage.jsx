@@ -14,6 +14,7 @@ const[item,setItem]= useState(null)
         try{
             const item = await getReviews(itemId)
             setItem(item)
+            
         }catch(arror){
             toast.error('no description')  
         }
