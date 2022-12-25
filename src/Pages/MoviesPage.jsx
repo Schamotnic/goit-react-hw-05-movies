@@ -51,7 +51,7 @@ useEffect(() =>{
 
 const forForm =(searchQuery) => {
   setQuery(searchQuery)
-  navigate({...location, search: ` query=${searchQuery}`})
+  // navigate({...location, search: `query=${searchQuery}`})
 } 
 
 return(
